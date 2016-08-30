@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/holo_red_light"
+        >
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="所有活动"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:layout_centerVertical="true"
+            android:gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/tv_music_title1"
+            />
+        <TextView
+            android:id="@+id/tv_play_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            />
+        <coyc.com.friendmusic.a_UI.Layout.SircleImageView.MarqueeTextView
+            android:id="@+id/tv_music_title1"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:padding="10dp"
+            android:text="氨基酸等看见爱是不爱好是不大好啊爱仕达"
+            android:visibility="invisible"
+
+        />
+        <!--收索框-->
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_title"
+            android:visibility="gone"
+            >
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:minWidth="120dp"
+                android:maxWidth="160dp"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+
+                android:layout_marginLeft="5dp"
+                android:hint="搜索"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColorHighlight="@android:color/secondary_text_dark"
+                android:textSize="16sp"
+                android:gravity="left|center_vertical"
+                android:shadowColor="@android:color/white"
+                android:layout_toLeftOf="@+id/bt_search"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                />
+            <ImageButton
+                android:id="@+id/bt_search"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/search1"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_titlebar"
+        android:background="@android:color/holo_blue_bright"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_light"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/tv_music_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="nihao"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+
+        />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+

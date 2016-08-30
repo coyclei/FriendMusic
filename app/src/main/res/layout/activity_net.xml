@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/open_or_close"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="开启WiFiDirect!"
+        android:padding="5dp"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/search_or_stop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="搜索附近设备"
+        android:padding="5dp"
+        android:onClick="onClick"
+        android:layout_below="@+id/open_or_close"
+        />
+    <!--双列表 左：搜索的附近的设备  右：已连接的设备（网络中设备可能多台）-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/search_or_stop"
+        >
+        <ListView
+            android:id="@+id/lv_peers"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ListView>
+        <ListView
+            android:id="@+id/lv_group"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ListView>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

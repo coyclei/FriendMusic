@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    >
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="在音乐的世界里 给自己个独有的名字"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_1"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="coyc"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:layout_marginLeft="10dp"
+
+        android:text="说一句喜欢的歌词 "
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_love_lrc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_2"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="...曾呼吸过空气"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_love_lrc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="设置个美美的头像(VIP)"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <coyc.com.friendmusic.a_UI.Layout.SircleImageView.CircleImageView
+        android:id="@+id/civ_face"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/b4" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civ_face"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="选择背景即可完成初始设置"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!--底部可滑动部分-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_4"
+        android:layout_marginTop="10dp">
+        <!--更多操作部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b1"
+                    android:onClick="OnClick"
+                    />
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b2"
+                    android:onClick="OnClick"
+                    />
+                <ImageView
+                    android:id="@+id/iv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b3"
+                    android:onClick="OnClick"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/ll_1"
+                >
+                <ImageView
+                    android:id="@+id/iv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b4"
+                    android:onClick="OnClick"
+                    />
+                <ImageView
+                    android:id="@+id/iv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b5"
+                    android:onClick="OnClick"
+                    />
+                <ImageView
+                    android:id="@+id/iv_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/b6"
+                    android:onClick="OnClick"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
